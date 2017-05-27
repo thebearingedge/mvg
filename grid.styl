@@ -77,11 +77,11 @@ columns($size)
 @media screen and (max-width: $xs)
   columns('xs')
 
-@media screen and (min-width: $sm)
+@media screen and (min-width: $xs) and (max-width: $sm)
   columns('sm')
 
-@media screen and (min-width: $md)
+@media screen and (min-width: $sm) and (max-width: $md)
   columns('md')
 
-@media screen and (min-width: $lg)
+@media screen and (min-width: $md)
   columns('lg')
