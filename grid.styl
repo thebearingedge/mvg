@@ -77,7 +77,7 @@ columns($size)
     .col-{$size}-{$unit}
       width 'calc(%s% - %s)' % (($unit / $units * 100) $gutter)
     .col-{$size}-offset-{$unit}
-      margin-left '%s%' % ($unit / $units * 100)
+      margin-left 'calc(%s% + %s)' % (($unit / $units * 100) $gutter / 2)
 
 @media screen and (max-width: $xs)
   columns('xs')
