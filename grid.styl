@@ -13,15 +13,14 @@ columns($size)
       margin-left '%s%' % ($unit / $units * 100)
 
 .grid
-  margin 0 ($gutter / 2)
-
+  margin auto
+  
 .row
-  float left
+  width 100%
   overflow hidden
 
 .col
-  margin-top $gutter
-  padding 0 ($gutter / 2)
+  margin $gutter ($gutter / 2) 0
   float left
 
 .col-xs-1,
@@ -77,10 +76,10 @@ columns($size)
 @media screen and (max-width: $xs)
   columns('xs')
 
-@media screen and (min-width: $xs) and (max-width: $sm)
+@media screen and (min-width: $xs)
   columns('sm')
 
-@media screen and (min-width: $sm) and (max-width: $md)
+@media screen and (min-width: $sm)
   columns('md')
 
 @media screen and (min-width: $md)
