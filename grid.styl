@@ -3,19 +3,20 @@
 
 $units  = 12
 $gutter = 1.5rem
-$xs     = 44rem
-$sm     = 62rem
-$md     = 75rem
-$lg     = 87rem
+$sm     = 48rem
+$md     = 62rem
+$lg     = 74rem
 
 .grid
   @extends .grid-fluid
-  @media screen and (min-width: $xs)
-    max-width: $xs - (2 * $gutter)
+  @media screen and (max-width: $sm)
+    max-width: $sm
   @media screen and (min-width: $sm)
     max-width: $sm - (2 * $gutter)
   @media screen and (min-width: $md)
     max-width: $md - (2 * $gutter)
+  @media screen and (min-width: $lg)
+    max-width: $lg - (2 * $gutter)
 
 .row
   width 100%
@@ -69,6 +70,7 @@ $lg     = 87rem
 .col-lg-10,
 .col-lg-11,
 .col-lg-12
+  width 'calc(100% - %s)' % $gutter
   margin $gutter ($gutter / 2) 0
   float left
 
@@ -79,14 +81,14 @@ columns($size)
     .col-{$size}-offset-{$unit}
       margin-left 'calc(%s% + %s)' % (($unit / $units * 100) $gutter / 2)
 
-@media screen and (max-width: $xs)
+@media screen and (max-width: $sm)
   columns('xs')
 
-@media screen and (min-width: $xs)
+@media screen and (min-width: $sm)
   columns('sm')
 
-@media screen and (min-width: $sm)
+@media screen and (min-width: $md)
   columns('md')
 
-@media screen and (min-width: $md)
+@media screen and (min-width: $lg)
   columns('lg')
