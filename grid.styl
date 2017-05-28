@@ -70,16 +70,17 @@ $lg     = 74rem
 .col-lg-10,
 .col-lg-11,
 .col-lg-12
-  width 'calc(100% - %s)' % $gutter
-  margin $gutter ($gutter / 2) 0
+  box-sizing border-box
+  width 100%
+  padding 0 ($gutter / 2)
   float left
 
 columns($size)
   for $unit in 1..$units
     .col-{$size}-{$unit}
-      width 'calc(%s% - %s)' % (($unit / $units * 100) $gutter)
+      width '%s%' % ($unit / $units * 100)
     .col-{$size}-offset-{$unit}
-      margin-left 'calc(%s% + %s)' % (($unit / $units * 100) $gutter / 2)
+      margin-left '%s%' % ($unit / $units * 100)
 
 @media screen and (max-width: $sm)
   columns('xs')

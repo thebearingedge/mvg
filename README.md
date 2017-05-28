@@ -44,12 +44,31 @@ Empty columns may be omitted with the use of `.offset` classes. Adding an `.offs
 ```html
 <div class="grid">
   <div class="row">
-    <div class="col-md-2">Lorem ipsum dolor sit amet</div>
-    <div class="col-md-4">Lorem ipsum dolor sit amet</div>
-    <div class="col-md-6">Lorem ipsum dolor sit amet</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
   </div>
   <div class="row">
-    <div class="col-md-4 col-md-offset-8">Lorem ipsum dolor sit amet</div>
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">.col-md-8 .col-md-offset-4</div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-6">.col-md-6</div>
   </div>
 </div>
 ```
+
+![Result](https://cloud.githubusercontent.com/assets/7432943/26525566/b5972458-430f-11e7-945d-850cdd182f70.png)
